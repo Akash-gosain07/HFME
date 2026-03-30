@@ -1,0 +1,14 @@
+﻿
+> hfme-2.0@2.0.0 db:seed
+> tsx prisma/seed.ts
+
+Starting seed...
+Created workflows and steps
+Generated data for Workflow 1 (100 sessions)
+Generated data for Workflow 2 (120 sessions with rising friction)
+Generated data for Workflow 3 (100 sessions with anomaly spike)
+Seed completed successfully! Generated 320 sessions across 3 workflows.
+
+Default credentials:
+Email: admin@hfme.io
+Password: hfme_admin_2024
