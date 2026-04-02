@@ -6,7 +6,7 @@ HFME 2.0 is an enterprise-grade platform that detects, predicts, and explains hu
 
 ---
 
-## 🎯 Features
+## 🎯 Features:
 
 ### Core Analytics
 - **Real-time Friction Detection** - Track step delays, retries, idle time, and drop-off rates
