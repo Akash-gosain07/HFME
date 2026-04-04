@@ -30,7 +30,7 @@ export function DashboardLivePage({ initialSnapshot = null }: { initialSnapshot?
 
   return (
     <DashboardWithIntro>
-      <AppShell connectionStatus={connectionStatus}>
+      <AppShell connectionStatus={connectionStatus} connectionTimestamp={data?.generatedAt}>
         <ClientErrorBoundary>
           {isLoading || !data ? (
             <LoadingPanel />
@@ -160,6 +160,14 @@ function DashboardContent({ snapshot }: { snapshot: LiveSnapshot }) {
             <div>
               <p className="text-sm uppercase tracking-[0.28em] text-slate-400">Landscape</p>
               <h2 className="mt-2 text-2xl font-semibold text-white">Realtime friction topology</h2>
+              <p className="mt-2 text-sm text-slate-400">
+                Live step-by-step friction scores updated at{' '}
+                {new Date(snapshot.generatedAt).toLocaleTimeString('en-US', {
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  second: '2-digit',
+                })}
+              </p>
             </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-100">
               <Activity className="h-3.5 w-3.5" />

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useEffectEvent, useRef, useState } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 
 /* ─── tiny helpers ─────────────────────────────────────────── */
@@ -258,14 +258,17 @@ interface IntroAnimationProps {
 export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
   const [phase, setPhase] = useState<'intro' | 'holding' | 'exit'>('intro');
   const controls = useAnimation();
+  const triggerComplete = useEffectEvent(() => {
+    onComplete();
+  });
 
   // Timeline: intro → holding (2s) → exit → onComplete
   useEffect(() => {
     const t1 = setTimeout(() => setPhase('holding'), 1200);
     const t2 = setTimeout(() => setPhase('exit'), 4800);
-    const t3 = setTimeout(() => onComplete(), 6000);
+    const t3 = setTimeout(() => triggerComplete(), 6000);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
-  }, [onComplete]);
+  }, []);
 
   const metrics = [
     { label: 'Sessions Tracked', value: '320+' },

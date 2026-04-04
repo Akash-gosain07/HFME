@@ -59,7 +59,7 @@ export function AdminLivePage({
   }
 
   return (
-    <AppShell connectionStatus={connectionStatus}>
+    <AppShell connectionStatus={connectionStatus} connectionTimestamp={data?.generatedAt}>
       <ClientErrorBoundary>
         {isLoading || !data || !config ? (
           <LoadingPanel label="Loading admin AI controls..." />

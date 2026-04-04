@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useEffectEvent, useState } from 'react';
+import { useEffect, useEffectEvent, useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import type { LiveSnapshot } from '@/lib/live-types';
@@ -25,6 +25,8 @@ export function useLiveSnapshot(initialSnapshot: LiveSnapshot | null = null) {
     queryFn: fetchLiveSnapshot,
     staleTime: 0,
     refetchOnWindowFocus: false,
+    refetchInterval: 1000,
+    refetchIntervalInBackground: true,
     initialData: initialSnapshot || undefined,
   });
   const [streamSnapshot, setStreamSnapshot] = useState<LiveSnapshot | null>(initialSnapshot);
@@ -46,6 +48,10 @@ export function useLiveSnapshot(initialSnapshot: LiveSnapshot | null = null) {
     setConnectionStatus(streamSnapshot || query.data ? 'reconnecting' : 'error');
   });
 
+  const onPing = useEffectEvent(() => {
+    setConnectionStatus('live');
+  });
+
   useEffect(() => {
     const eventSource = new EventSource('/api/ai/stream');
 
@@ -57,6 +63,10 @@ export function useLiveSnapshot(initialSnapshot: LiveSnapshot | null = null) {
       onSnapshot(event as MessageEvent);
     });
 
+    eventSource.addEventListener('ping', () => {
+      onPing();
+    });
+
     eventSource.addEventListener('error', () => {
       onError();
     });
@@ -66,10 +76,31 @@ export function useLiveSnapshot(initialSnapshot: LiveSnapshot | null = null) {
     };
   }, [onError, onSnapshot]);
 
+  const data = useMemo(() => {
+    const snapshots = [streamSnapshot, query.data].filter(
+      (snapshot): snapshot is LiveSnapshot => Boolean(snapshot)
+    );
+
+    if (!snapshots.length) {
+      return null;
+    }
+
+    return snapshots.reduce((latest, current) => {
+      const latestTime = Number.isNaN(Date.parse(latest.generatedAt))
+        ? latest.tick
+        : Date.parse(latest.generatedAt);
+      const currentTime = Number.isNaN(Date.parse(current.generatedAt))
+        ? current.tick
+        : Date.parse(current.generatedAt);
+
+      return currentTime >= latestTime ? current : latest;
+    });
+  }, [query.data, streamSnapshot]);
+
   return {
-    data: streamSnapshot ?? query.data ?? null,
-    isLoading: query.isLoading && !streamSnapshot,
-    error: query.error,
+    data,
+    isLoading: query.isLoading && !data,
+    error: data ? null : query.error,
     connectionStatus,
     refetch: query.refetch,
   };

@@ -19,7 +19,7 @@ export function WorkflowsLivePage({
   const { data, error, isLoading, connectionStatus, refetch } = useLiveSnapshot(initialSnapshot);
 
   return (
-    <AppShell connectionStatus={connectionStatus}>
+    <AppShell connectionStatus={connectionStatus} connectionTimestamp={data?.generatedAt}>
       <ClientErrorBoundary>
         {isLoading || !data ? (
           <LoadingPanel label="Loading live workflows..." />

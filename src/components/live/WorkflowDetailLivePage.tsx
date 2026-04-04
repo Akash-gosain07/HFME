@@ -68,7 +68,7 @@ export function WorkflowDetailLivePage({
   }
 
   return (
-    <AppShell connectionStatus={connectionStatus}>
+    <AppShell connectionStatus={connectionStatus} connectionTimestamp={data?.generatedAt}>
       <ClientErrorBoundary>
         {isLoading || !data ? (
           <LoadingPanel label="Streaming workflow detail..." />
@@ -106,6 +106,14 @@ export function WorkflowDetailLivePage({
                   <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/70">Live workflow view</p>
                   <h1 className="mt-3 text-4xl font-semibold text-white">{workflow.name}</h1>
                   <p className="mt-3 text-base text-slate-300">{workflow.description}</p>
+                  <p className="mt-3 text-sm text-slate-400">
+                    Snapshot updated at{' '}
+                    {new Date(data.generatedAt).toLocaleTimeString('en-US', {
+                      hour: 'numeric',
+                      minute: '2-digit',
+                      second: '2-digit',
+                    })}
+                  </p>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-4">
