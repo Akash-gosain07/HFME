@@ -4,6 +4,15 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 from pathlib import Path
 
+FEATURE_NAMES = [
+    "frictionScore",
+    "avgTime",
+    "retries",
+    "idleTime",
+    "backNav",
+    "dropOffRate",
+]
+
 class AnomalyDetector:
     def __init__(self):
         self.model = IsolationForest(
@@ -80,6 +89,62 @@ class AnomalyDetector:
             "has_anomaly": has_anomaly,
             "threshold": threshold
         }
+
+    def explain(self, features: np.ndarray):
+        """Return feature contributions for the latest samples."""
+        if len(features) == 0:
+            return []
+
+        try:
+            scaled_features = self.scaler.transform(features)
+        except:
+            scaled_features = self.scaler.fit_transform(features)
+
+        try:
+            import shap
+
+            explainer = shap.TreeExplainer(self.model)
+            shap_values = explainer.shap_values(scaled_features)
+
+            if isinstance(shap_values, list):
+                shap_values = shap_values[0]
+
+            explanations = []
+            for row_index, row in enumerate(shap_values):
+                contributions = []
+                for feature_index, impact in enumerate(row):
+                    contributions.append({
+                        "feature": FEATURE_NAMES[feature_index],
+                        "impact": float(abs(impact)),
+                        "direction": "increase" if impact >= 0 else "decrease",
+                        "value": float(features[row_index][feature_index]),
+                    })
+
+                contributions.sort(key=lambda item: item["impact"], reverse=True)
+                explanations.append(contributions[:3])
+
+            return explanations
+        except:
+            means = np.mean(features, axis=0)
+            stds = np.std(features, axis=0) + 1e-6
+            explanations = []
+
+            for row in features:
+                z_scores = np.abs((row - means) / stds)
+                ranked = np.argsort(z_scores)[::-1][:3]
+                contributions = []
+                for feature_index in ranked:
+                    value = float(row[feature_index])
+                    baseline = float(means[feature_index])
+                    contributions.append({
+                        "feature": FEATURE_NAMES[feature_index],
+                        "impact": float(z_scores[feature_index]),
+                        "direction": "increase" if value >= baseline else "decrease",
+                        "value": value,
+                    })
+                explanations.append(contributions)
+
+            return explanations
     
     def load_model(self):
         """Load pretrained model"""

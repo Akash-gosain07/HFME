@@ -16,6 +16,8 @@ COPY . .
 
 # Generate Prisma Client
 RUN npx prisma generate
+RUN DATABASE_URL="file:./dev.db" npm run db:push
+RUN DATABASE_URL="file:./dev.db" npm run db:seed
 
 # Build Next.js app
 RUN npm run build
@@ -33,6 +35,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder /app/prisma ./prisma
+COPY --from=builder /app/data ./data
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
 
 USER nextjs

@@ -1,427 +1,197 @@
-# HFME 2.0 - Human Friction Mapping Engine
+# HFME 2.0
 
-> **AI-Powered Behavioral Analytics Platform for Workflow Friction Detection**
+Realtime AI behavioral analytics for multi-step workflows. HFME now streams live behavioral events, recalculates friction every second, detects anomalies, forecasts risk, and pushes fresh natural-language guidance into the dashboard, workflow views, and admin console.
 
-HFME 2.0 is an enterprise-grade platform that detects, predicts, and explains human friction in multi-step workflows using advanced AI monitoring and machine learning.
+## Screenshots
 
----
+### Dashboard
+![HFME dashboard](public/screenshots/dashboard.png)
 
-## 🎯 Features:
+### Workflows
+![HFME workflows](public/screenshots/workflows.png)
 
-### Core Analytics
-- **Real-time Friction Detection** - Track step delays, retries, idle time, and drop-off rates
-- **Multi-workflow Monitoring** - Manage and analyze multiple workflows simultaneously
-- **Session Tracking** - Detailed event-level tracking of user behavior
-- **Aggregated Metrics** - Automated calculation of friction scores and behavioral patterns
+### Workflow Detail
+![HFME workflow detail](public/screenshots/workflow-detail.png)
 
-### AI-Powered Insights
-- **Anomaly Detection** - Isolation Forest algorithm identifies unusual friction spikes
-- **Friction Prediction** - Time-series forecasting predicts future friction trends
-- **Natural Language Explanations** - LLM-based insights generate human-readable recommendations
-- **Confidence Scoring** - AI provides confidence levels for all predictions and insights
+### Admin
+![HFME admin](public/screenshots/admin.png)
 
-### Enterprise Features
-- **Live Monitoring Dashboard** - Real-time friction metrics and AI alerts
-- **Friction Heatmaps** - Visual representation of workflow bottlenecks
-- **AI Insights Panel** - Actionable recommendations for workflow optimization
-- **Admin Controls** - Configure AI sensitivity and monitoring parameters
+## What Changed
 
----
+- FastAPI now exposes a realtime SSE stream at `/events/stream`.
+- A background worker continuously ingests live behavior batches and runs anomaly detection, prediction, and explanation refreshes.
+- Redis Pub/Sub and a Redis queue are used when Redis is available, with an in-process fallback for local verification.
+- Every major page now consumes the same typed live snapshot contract.
+- The dashboard, workflows index, workflow detail page, and admin page all update automatically every second.
+- Manual "Get AI Insights" actions route through the protected AI proxy and return fresh explanations plus suggested fixes.
+- Admin controls can update live sensitivity settings and trigger retraining.
+- Auth now protects the application and AI proxy routes with a signed session cookie.
+- Browser automation screenshots were captured from the running app and stored in `public/screenshots/`.
 
-## 🏗️ Architecture
+## Architecture
 
+```text
+Next.js App Router
+  -> protected auth + UI shells
+  -> typed AI proxy routes (/api/ai/*)
+  -> realtime client hook + SSE consumer
+
+FastAPI AI Service
+  -> /live/snapshot
+  -> /events/stream
+  -> /analyze/*
+  -> /train/*
+  -> /config
+  -> background simulation + analysis loop
+
+Storage / Messaging
+  -> Prisma + SQLite demo database
+  -> Redis Pub/Sub + queue when available
+  -> in-memory fallback for local AI runtime continuity
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    HFME 2.0 Platform                     │
-├─────────────────────────────────────────────────────────┤
-│                                                          │
-│  ┌──────────────┐    ┌──────────────┐    ┌───────────┐ │
-│  │   Next.js 14 │◄──►│   FastAPI    │◄──►│  AI/ML    │ │
-│  │   (Frontend) │    │  (AI Service)│    │  Models   │ │
-│  │   + API      │    │              │    │           │ │
-│  └───────┬──────┘    └──────────────┘    └───────────┘ │
-│          │                                               │
-│          │                                               │
-│  ┌───────▼──────┐    ┌──────────────┐                  │
-│  │  PostgreSQL  │    │    Redis     │                  │
-│  │  (Prisma ORM)│    │  (Cache)     │                  │
-│  └──────────────┘    └──────────────┘                  │
-│                                                          │
-└─────────────────────────────────────────────────────────┘
-```
 
-### Tech Stack
+## Realtime Data Flow
 
-**Frontend & API**
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS + shadcn/ui
-- React Query (TanStack Query)
-- Recharts + D3.js
+1. The seed script creates workflows, events, aggregated metrics, and `data/live-runtime.json`.
+2. FastAPI loads that runtime map and starts a per-second simulation loop.
+3. Each tick produces new behavioral events for every workflow.
+4. The analysis worker updates live histories, runs Isolation Forest + the predictor, computes explainability, and refreshes insights.
+5. FastAPI publishes the latest snapshot and streams it over SSE.
+6. Next.js pages render an initial snapshot server-side, then stay live through the protected `/api/ai/stream` proxy.
 
-**AI/ML Service**
-- Python FastAPI
-- scikit-learn (Isolation Forest, Ridge Regression)
-- NumPy, Pandas
-- Optional: OpenAI API for enhanced explanations
-
-**Database & Cache**
-- PostgreSQL with Prisma ORM
-- Redis for real-time caching
-
-**Deployment**
-- Docker & Docker Compose
-- Vercel-ready (Next.js)
-- Railway-ready (Python service)
-
----
-
-## 🚀 Quick Start
+## Local Development
 
 ### Prerequisites
 
-- **Node.js** 20+ and npm
-- **Python** 3.11+
-- **PostgreSQL** 16+
-- **Redis** 7+
-- **Docker** (optional, recommended)
+- Node.js 20+
+- Python 3.11+
+- Redis 7+ if you want the Redis-backed path
+- Docker Desktop only if you want the compose flow
 
-### Option 1: Docker Setup (Recommended)
+### Environment
 
-1. **Clone and configure**
-   ```powershell
-   cd C:\Users\win11\Desktop\HFME
-   cp .env.example .env
-   ```
+Copy `.env.example` to `.env`.
 
-2. **Start all services**
-   ```powershell
-   docker-compose up -d
-   ```
+Important values:
 
-3. **Initialize database**
-   ```powershell
-   docker-compose exec web npm run db:push
-   docker-compose exec web npm run db:seed
-   ```
+- `DATABASE_URL="file:./dev.db"`
+- `AI_SERVICE_URL="http://localhost:8000"`
+- `AI_INTERNAL_API_KEY="hfme-internal-key"`
+- `AUTH_SECRET="hfme-local-auth-secret"`
 
-4. **Access application**
-   - Web App: http://localhost:3000
-   - AI Service: http://localhost:8000/docs
+### Setup
 
-### Option 2: Local Development Setup
-
-1. **Install dependencies**
-   ```powershell
-   npm install
-   cd ai-service
-   pip install -r requirements.txt
-   cd ..
-   ```
-
-2. **Configure environment**
-   ```powershell
-   cp .env.example .env
-   # Edit .env with your database credentials
-   ```
-
-3. **Setup database**
-   ```powershell
-   npm run db:push
-   npm run db:seed
-   ```
-
-4. **Start services** (3 separate terminals)
-   ```powershell
-   # Terminal 1: Web app
-   npm run dev
-
-   # Terminal 2: AI service
-   cd ai-service
-   python -m uvicorn main:app --reload --port 8000
-
-   # Terminal 3: PostgreSQL & Redis (if not using Docker)
-   # Start manually or use Docker for just these:
-   docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres:16-alpine
-   docker run -d -p 6379:6379 redis:7-alpine
-   ```
-
-5. **Access application**
-   - Web App: http://localhost:3000
-   - AI Service: http://localhost:8000/docs
-
----
-
-## 📊 Demo Data
-
-The seed script generates **320 sessions** across **3 workflows**:
-
-### Workflow 1: E-commerce Checkout (100 sessions)
-- **Status**: Stable, low friction
-- **Pattern**: Consistent performance, ~90% completion
-- **Steps**: Cart Review → Shipping → Payment → Confirmation
-
-### Workflow 2: SaaS Onboarding (120 sessions)
-- **Status**: Rising friction trend
-- **Pattern**: Friction increases over time, drop-off rising
-- **Steps**: Account Creation → Email Verification → Profile Setup → Team Invitation → Integration Setup
-- **AI Behavior**: Prediction model will detect upward trend
-
-### Workflow 3: Document Upload (100 sessions)
-- **Status**: Sudden anomaly spike (last 5 days)
-- **Pattern**: Recent dramatic increase in retries and idle time
-- **Steps**: File Selection → Upload → Validation → Metadata → Review
-- **AI Behavior**: Anomaly detector will flag this workflow
-
----
-
-## 🔐 Default Credentials
-
+```powershell
+npm install
+npm run db:generate
+npm run db:push
+npm run db:seed
+python -m pip install -r ai-service\requirements.txt
 ```
+
+### Run Locally
+
+Terminal 1:
+
+```powershell
+python -m uvicorn ai-service.main:app --host 0.0.0.0 --port 8000
+```
+
+Terminal 2:
+
+```powershell
+npm run build
+npm run start
+```
+
+Optional Redis:
+
+```powershell
+docker run -d -p 6379:6379 redis:7-alpine
+```
+
+## Docker Compose
+
+`docker-compose up -d` now builds:
+
+- `web`
+- `ai-service`
+- `redis`
+
+The web image seeds the SQLite demo database during build so the app comes up with working demo data and a generated runtime map. The AI service copies `data/live-runtime.json` so its workflow IDs match the seeded UI.
+
+Compose env defaults:
+
+- `DATABASE_URL=file:./dev.db`
+- `AI_INTERNAL_API_KEY=hfme-internal-key`
+- `AUTH_SECRET=hfme-local-auth-secret`
+
+## Default Login
+
+```text
 Email: admin@hfme.io
 Password: hfme_admin_2024
 ```
 
----
+## Key Routes
 
-## 📋 API Endpoints
+### App
 
-### Next.js API Routes
+- `/`
+- `/workflows`
+- `/workflows/[id]`
+- `/admin`
+- `/login`
 
-**Workflows**
-- `GET /api/workflows` - List all workflows
-- `GET /api/workflows/[id]` - Get workflow details
-- `GET /api/workflows/[id]/metrics` - Calculate and retrieve metrics
-- `POST /api/workflows` - Create new workflow
+### Protected Next.js AI Proxy
 
-**AI Insights**
-- `POST /api/ai/insights` - Generate AI insights for a workflow step
+- `GET /api/ai/live`
+- `GET /api/ai/stream`
+- `POST /api/ai/insights`
+- `GET /api/ai/status`
+- `PUT /api/ai/config`
+- `POST /api/ai/retrain`
 
-### Python AI Service
+### FastAPI
 
-**Analysis**
-- `POST /analyze/anomaly` - Detect friction anomalies
-- `POST /analyze/predict` - Predict future friction
-- `POST /analyze/explain` - Generate natural language explanation
+- `GET /health`
+- `GET /live/snapshot`
+- `GET /events/stream`
+- `POST /analyze/anomaly`
+- `POST /analyze/predict`
+- `POST /analyze/explain`
+- `POST /train/anomaly`
+- `POST /train/predictor`
+- `POST /train/realtime`
+- `GET /models/status`
+- `PUT /config`
 
-**Training**
-- `POST /train/anomaly` - Train anomaly detection model
-- `POST /train/predictor` - Train friction prediction model
+## Explainability Notes
 
-**Health**
-- `GET /health` - Service health check
+- SHAP-style explainability is wired into the anomaly detector.
+- When the `shap` package is available, FastAPI can use it directly.
+- On environments where `shap` cannot be compiled, HFME falls back to deterministic top-contributor scoring so the UI still receives feature drivers and suggested fixes.
 
-Full API documentation: http://localhost:8000/docs
+## Verification Checklist
 
----
+The current implementation was validated with:
 
-## 🧪 Development Workflow
+- `npm run db:generate`
+- `npm run db:push`
+- `npm run db:seed`
+- `npx tsc --noEmit`
+- `python -m compileall ai-service`
+- `npm run build`
+- Local Next.js + FastAPI boot
+- Protected login flow
+- Live snapshot delta checks showing tick and friction changes between reads
+- SSE stream output via `/api/ai/stream`
+- Manual insight, config update, and retraining route checks
+- Headless browser screenshot capture with Playwright Core + local Chrome
 
-### Running Tests
-```powershell
-# Next.js tests
-npm test
+## Troubleshooting
 
-# Python tests
-cd ai-service
-pytest
-```
-
-### Database Management
-```powershell
-# View database in Prisma Studio
-npm run db:studio
-
-# Reset and reseed database
-npm run db:push
-npm run db:seed
-
-# Generate Prisma client after schema changes
-npm run db:generate
-```
-
-### AI Model Management
-```powershell
-# Train models with current data (called automatically by seed)
-curl -X POST http://localhost:8000/train/anomaly -H "Content-Type: application/json" -d @training-data.json
-```
-
----
-
-## 🌐 Deployment
-
-### Vercel (Next.js App)
-
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables in Vercel dashboard
-3. Deploy automatically on push
-
-```env
-DATABASE_URL=<your-supabase-or-neon-db-url>
-REDIS_URL=<your-upstash-redis-url>
-AI_SERVICE_URL=<your-railway-ai-service-url>
-NEXT_PUBLIC_APP_URL=https://your-app.vercel.app
-```
-
-### Railway (AI Service)
-
-1. Create new project on Railway
-2. Deploy from GitHub or Docker
-3. Add environment variables
-4. Copy the service URL to Vercel env
-
-### Supabase (PostgreSQL)
-
-1. Create new Supabase project
-2. Copy connection string to `DATABASE_URL`
-3. Run migrations:
-   ```powershell
-   npx prisma db push --skip-generate
-   ```
-
-### Upstash (Redis)
-
-1. Create Redis database on Upstash
-2. Copy connection URL to `REDIS_URL`
-
----
-
-## 🔧 Configuration
-
-### AI Monitoring Settings
-
-Configure in database or via Admin UI:
-
-```typescript
-{
-  enabled: true,
-  anomalySensitivity: 0.1,        // 0.0 - 1.0 (lower = more sensitive)
-  predictionEnabled: true,
-  explanationEnabled: true,
-  monitoringInterval: 300,        // seconds
-  alertThreshold: 0.7             // 0.0 - 1.0
-}
-```
-
-### Friction Score Calculation
-
-Weighted formula:
-```
-Friction Score = 
-  (25% × Time Overrun) +
-  (20% × Normalized Retries) +
-  (20% × Normalized Idle Time) +
-  (15% × Normalized Back Navigation) +
-  (20% × Drop-off Rate)
-```
-
-**Friction Levels:**
-- **Low** (0.0 - 0.3): Green
-- **Medium** (0.3 - 0.5): Amber
-- **High** (0.5 - 0.75): Red
-- **Critical** (0.75+): Dark Red
-
----
-
-## 📁 Project Structure
-
-```
-HFME/
-├── ai-service/              # Python FastAPI microservice
-│   ├── models/              # ML model implementations
-│   │   ├── anomaly_detector.py
-│   │   ├── friction_predictor.py
-│   │   └── insight_generator.py
-│   ├── trained_models/      # Serialized model files
-│   ├── main.py              # FastAPI application
-│   ├── requirements.txt
-│   └── Dockerfile
-├── prisma/
-│   ├── schema.prisma        # Database schema
-│   └── seed.ts              # Seed data generator
-├── src/
-│   ├── app/                 # Next.js 14 App Router
-│   │   ├── api/             # API routes
-│   │   ├── workflows/       # Workflow pages
-│   │   ├── admin/           # Admin pages
-│   │   ├── page.tsx         # Dashboard
-│   │   └── layout.tsx
-│   ├── components/          # React components
-│   └── lib/                 # Utilities and clients
-│       ├── prisma.ts
-│       ├── redis.ts
-│       ├── ai-client.ts
-│       └── utils.ts
-├── docker-compose.yml       # Multi-service orchestration
-├── Dockerfile               # Next.js container
-├── package.json
-└── README.md
-```
-
----
-
-## 🤝 Contributing
-
-This is a demonstration project. For production use:
-
-1. Add authentication and authorization
-2. Implement proper error boundaries
-3. Add comprehensive testing
-4. Set up monitoring and logging
-5. Implement rate limiting on AI endpoints
-6. Add data retention policies
-
----
-
-## 📄 License
-
-MIT License - See LICENSE file for details
-
----
-
-## 🆘 Troubleshooting
-
-### Database Connection Issues
-```powershell
-# Check PostgreSQL is running
-docker ps | grep postgres
-
-# Test connection
-psql postgresql://postgres:postgres@localhost:5432/hfme
-```
-
-### AI Service Not Responding
-```powershell
-# Check service logs
-docker-compose logs ai-service
-
-# Verify health
-curl http://localhost:8000/health
-```
-
-### Port Already in Use
-```powershell
-# Windows: Find and kill process on port 3000
-netstat -ano | findstr :3000
-taskkill /PID <PID> /F
-```
-
-### Seed Script Fails
-```powershell
-# Ensure database is empty
-npm run db:push -- --force-reset
-npm run db:seed
-```
-
----
-
-## 📚 Additional Resources
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Prisma Documentation](https://www.prisma.io/docs)
-- [FastAPI Documentation](https://fastapi.tiangolo.com)
-- [scikit-learn Documentation](https://scikit-learn.org)
-
----
-
-**Built with ❤️ for better user experiences**
+- If Redis is unavailable, the AI service will continue with its in-process queue fallback.
+- If `docker-compose up -d` cannot connect to Docker, start Docker Desktop first.
+- If FastAPI dependencies are missing locally, rerun `python -m pip install -r ai-service\requirements.txt`.
+- If you need fresh demo IDs, rerun `npm run db:seed` to regenerate `data/live-runtime.json`.

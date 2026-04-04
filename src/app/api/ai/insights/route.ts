@@ -1,92 +1,68 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+
 import { aiClient } from '@/lib/ai-client';
+import { findStep } from '@/lib/live-snapshot';
+import { prisma } from '@/lib/prisma';
+import { requireSession } from '@/lib/session-guards';
+
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
+  const auth = await requireSession();
+  if (auth.response) {
+    return auth.response;
+  }
+
   try {
-    const { workflowId, stepId } = await request.json();
-
-    // Get step and metrics
-    const step = await prisma.step.findUnique({
-      where: { id: stepId },
-      include: {
-        aggregatedMetrics: true,
-      },
-    });
-
-    if (!step || !step.aggregatedMetrics) {
-      return NextResponse.json({ error: 'Step or metrics not found' }, { status: 404 });
-    }
-
-    const metrics = step.aggregatedMetrics;
-
-    // Get historical metrics for anomaly detection
-    const historicalMetrics = await prisma.aggregatedMetrics.findMany({
-      where: {
-        workflowId,
-        stepId,
-      },
-      orderBy: { calculatedAt: 'asc' },
-      take: 30,
-    });
-
-    const metricData = historicalMetrics.map((m) => ({
-      timestamp: m.calculatedAt.toISOString(),
-      frictionScore: m.frictionScore,
-      avgTime: m.avgTime,
-      retries: m.retries,
-      idleTime: m.idleTime,
-      backNav: m.backNav,
-      dropOffRate: m.dropOffRate,
-    }));
-
-    // Detect anomalies
-    const anomalyResult = await aiClient.detectAnomalies(workflowId, stepId, metricData);
-
-    // Predict friction
-    const predictionResult = await aiClient.predictFriction(workflowId, stepId, metricData);
-
-    // Generate explanation
-    const currentMetrics = {
-      timestamp: metrics.calculatedAt.toISOString(),
-      frictionScore: metrics.frictionScore,
-      avgTime: metrics.avgTime,
-      retries: metrics.retries,
-      idleTime: metrics.idleTime,
-      backNav: metrics.backNav,
-      dropOffRate: metrics.dropOffRate,
+    const { workflowId, stepId } = (await request.json()) as {
+      workflowId?: string;
+      stepId?: string;
     };
 
-    const explanationResult = await aiClient.generateExplanation(
+    if (!workflowId || !stepId) {
+      return NextResponse.json(
+        { error: 'workflowId and stepId are required.' },
+        { status: 400 }
+      );
+    }
+
+    const snapshot = await aiClient.getLiveSnapshot();
+    const result = findStep(snapshot, workflowId, stepId);
+
+    if (!result) {
+      return NextResponse.json({ error: 'Live workflow step not found.' }, { status: 404 });
+    }
+
+    const explanation = await aiClient.generateExplanation(
       workflowId,
       stepId,
-      step.name,
-      currentMetrics,
-      anomalyResult.hasAnomaly,
-      predictionResult.trend
+      result.step.name,
+      result.step.current,
+      result.step.anomaly.hasAnomaly,
+      result.step.prediction.trend
     );
 
-    // Store AI insight
     const insight = await prisma.aIInsight.create({
       data: {
         workflowId,
         stepId,
-        detectedIssue: explanationResult.detectedIssue,
-        impactScore: explanationResult.impactScore,
-        recommendation: explanationResult.recommendation,
-        confidenceLevel: explanationResult.confidenceLevel,
-        insightType: anomalyResult.hasAnomaly ? 'anomaly' : 'prediction',
+        detectedIssue: explanation.detectedIssue,
+        impactScore: explanation.impactScore,
+        recommendation: explanation.recommendation,
+        confidenceLevel: explanation.confidenceLevel,
+        insightType: result.step.anomaly.hasAnomaly ? 'anomaly' : 'recommendation',
       },
     });
 
     return NextResponse.json({
       insight,
-      anomaly: anomalyResult,
-      prediction: predictionResult,
-      explanation: explanationResult,
+      explanation,
+      anomaly: result.step.anomaly,
+      prediction: result.step.prediction,
     });
   } catch (error) {
-    console.error('Failed to generate insights:', error);
-    return NextResponse.json({ error: 'Failed to generate insights' }, { status: 500 });
+    console.error('Failed to generate live insights:', error);
+    return NextResponse.json({ error: 'Failed to generate live insights.' }, { status: 500 });
   }
 }

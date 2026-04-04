@@ -1,0 +1,224 @@
+{
+  "generatedAt": "2026-04-04T09:14:43.532Z",
+  "workflows": [
+    {
+      "id": "cmnk48vuh0002lty48g7cpgjp",
+      "name": "E-commerce Checkout Flow",
+      "description": "Standard checkout process with cart, shipping, and payment",
+      "profile": {
+        "mode": "stable",
+        "activeUsers": 18,
+        "volatility": 0.06
+      },
+      "steps": [
+        {
+          "id": "cmnk48vuh0003lty4d02zoxo3",
+          "name": "Cart Review",
+          "order": 0,
+          "expectedTimeSeconds": 30,
+          "baseline": {
+            "avgTime": 28,
+            "retries": 0.6,
+            "idleTime": 4,
+            "backNav": 0.2,
+            "dropOffRate": 0.05
+          }
+        },
+        {
+          "id": "cmnk48vuh0004lty412d6egt0",
+          "name": "Shipping Information",
+          "order": 1,
+          "expectedTimeSeconds": 45,
+          "baseline": {
+            "avgTime": 42,
+            "retries": 1.2,
+            "idleTime": 8,
+            "backNav": 0.3,
+            "dropOffRate": 0.08
+          }
+        },
+        {
+          "id": "cmnk48vuh0005lty40ukmxr8s",
+          "name": "Payment Method",
+          "order": 2,
+          "expectedTimeSeconds": 40,
+          "baseline": {
+            "avgTime": 44,
+            "retries": 2.1,
+            "idleTime": 12,
+            "backNav": 0.5,
+            "dropOffRate": 0.12
+          }
+        },
+        {
+          "id": "cmnk48vuh0006lty4kaettmtp",
+          "name": "Order Confirmation",
+          "order": 3,
+          "expectedTimeSeconds": 20,
+          "baseline": {
+            "avgTime": 24,
+            "retries": 0.4,
+            "idleTime": 3,
+            "backNav": 0.1,
+            "dropOffRate": 0.04
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmnk48vun0007lty4gs37g98s",
+      "name": "SaaS User Onboarding",
+      "description": "New user signup and configuration process",
+      "profile": {
+        "mode": "rising",
+        "activeUsers": 26,
+        "volatility": 0.09
+      },
+      "steps": [
+        {
+          "id": "cmnk48vun0008lty4vcv20fy1",
+          "name": "Account Creation",
+          "order": 0,
+          "expectedTimeSeconds": 40,
+          "baseline": {
+            "avgTime": 38,
+            "retries": 0.9,
+            "idleTime": 7,
+            "backNav": 0.2,
+            "dropOffRate": 0.07
+          }
+        },
+        {
+          "id": "cmnk48vun0009lty424ksd7hj",
+          "name": "Email Verification",
+          "order": 1,
+          "expectedTimeSeconds": 60,
+          "baseline": {
+            "avgTime": 58,
+            "retries": 1.4,
+            "idleTime": 16,
+            "backNav": 0.4,
+            "dropOffRate": 0.12
+          }
+        },
+        {
+          "id": "cmnk48vun000alty4w6cr0wld",
+          "name": "Profile Setup",
+          "order": 2,
+          "expectedTimeSeconds": 50,
+          "baseline": {
+            "avgTime": 49,
+            "retries": 1.8,
+            "idleTime": 18,
+            "backNav": 0.6,
+            "dropOffRate": 0.13
+          }
+        },
+        {
+          "id": "cmnk48vun000blty4x7t39fe5",
+          "name": "Team Invitation",
+          "order": 3,
+          "expectedTimeSeconds": 45,
+          "baseline": {
+            "avgTime": 47,
+            "retries": 1.9,
+            "idleTime": 19,
+            "backNav": 0.7,
+            "dropOffRate": 0.14
+          }
+        },
+        {
+          "id": "cmnk48vun000clty4kl0d9mxw",
+          "name": "Integration Setup",
+          "order": 4,
+          "expectedTimeSeconds": 90,
+          "baseline": {
+            "avgTime": 85,
+            "retries": 2.5,
+            "idleTime": 24,
+            "backNav": 0.9,
+            "dropOffRate": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmnk48vus000dlty4ixq6j8ry",
+      "name": "Document Upload & Processing",
+      "description": "Upload, validate, and process documents",
+      "profile": {
+        "mode": "anomaly",
+        "activeUsers": 14,
+        "volatility": 0.12,
+        "anomalyStepOrder": 1
+      },
+      "steps": [
+        {
+          "id": "cmnk48vus000elty4ip77xxim",
+          "name": "File Selection",
+          "order": 0,
+          "expectedTimeSeconds": 25,
+          "baseline": {
+            "avgTime": 23,
+            "retries": 0.5,
+            "idleTime": 3,
+            "backNav": 0.1,
+            "dropOffRate": 0.04
+          }
+        },
+        {
+          "id": "cmnk48vus000flty4f7lq9u3i",
+          "name": "Document Upload",
+          "order": 1,
+          "expectedTimeSeconds": 35,
+          "baseline": {
+            "avgTime": 34,
+            "retries": 1.8,
+            "idleTime": 11,
+            "backNav": 0.6,
+            "dropOffRate": 0.11
+          }
+        },
+        {
+          "id": "cmnk48vus000glty4iz6br99h",
+          "name": "Format Validation",
+          "order": 2,
+          "expectedTimeSeconds": 20,
+          "baseline": {
+            "avgTime": 27,
+            "retries": 1.4,
+            "idleTime": 10,
+            "backNav": 0.5,
+            "dropOffRate": 0.1
+          }
+        },
+        {
+          "id": "cmnk48vus000hlty4fbo5qumg",
+          "name": "Metadata Entry",
+          "order": 3,
+          "expectedTimeSeconds": 60,
+          "baseline": {
+            "avgTime": 58,
+            "retries": 2.1,
+            "idleTime": 14,
+            "backNav": 0.7,
+            "dropOffRate": 0.12
+          }
+        },
+        {
+          "id": "cmnk48vus000ilty4iuberqbw",
+          "name": "Final Review",
+          "order": 4,
+          "expectedTimeSeconds": 30,
+          "baseline": {
+            "avgTime": 31,
+            "retries": 1.3,
+            "idleTime": 9,
+            "backNav": 0.4,
+            "dropOffRate": 0.09
+          }
+        }
+      ]
+    }
+  ]
+}

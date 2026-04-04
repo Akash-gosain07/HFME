@@ -4,10 +4,10 @@ import { calculateFrictionScore } from '@/lib/utils';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const workflowId = params.id;
+    const { id: workflowId } = await params;
 
     // Get all steps
     const steps = await prisma.step.findMany({

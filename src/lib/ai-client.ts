@@ -1,45 +1,20 @@
+import type {
+  AnomalyResult,
+  ExplanationResult,
+  LiveSnapshot,
+  MetricData,
+  ModelStatus,
+  MonitoringConfig,
+  PredictionResult,
+} from '@/lib/live-types';
+
 const AI_SERVICE_URL = process.env.AI_SERVICE_URL || 'http://localhost:8000';
+const AI_INTERNAL_API_KEY = process.env.AI_INTERNAL_API_KEY || 'hfme-internal-key';
 
-export interface MetricData {
-  timestamp: string;
-  frictionScore: number;
-  avgTime: number;
-  retries: number;
-  idleTime: number;
-  backNav: number;
-  dropOffRate: number;
-}
-
-export interface AnomalyResult {
-  workflowId: string;
-  stepId: string;
-  anomalies: Array<{
-    timestamp: string;
-    frictionScore: number;
-    score: number;
-  }>;
-  anomalyScore: number;
-  hasAnomaly: boolean;
-  threshold: number;
-}
-
-export interface PredictionResult {
-  workflowId: string;
-  stepId: string;
-  predictions: number[];
-  trend: string;
-  confidence: number;
-  riskLevel: string;
-}
-
-export interface ExplanationResult {
-  workflowId: string;
-  stepId: string;
-  detectedIssue: string;
-  impactScore: number;
-  recommendation: string;
-  confidenceLevel: number;
-  reasoning: string;
+interface RequestOptions {
+  method?: 'GET' | 'POST' | 'PUT';
+  body?: unknown;
+  cache?: RequestCache;
 }
 
 class AIClient {
@@ -49,6 +24,43 @@ class AIClient {
     this.baseUrl = baseUrl;
   }
 
+  private async requestJson<T>(path: string, options: RequestOptions = {}) {
+    const response = await fetch(`${this.baseUrl}${path}`, {
+      method: options.method || 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-HFME-AI-Key': AI_INTERNAL_API_KEY,
+      },
+      cache: options.cache || 'no-store',
+      body: options.body ? JSON.stringify(options.body) : undefined,
+    });
+
+    if (!response.ok) {
+      throw new Error(`AI service error ${response.status}: ${response.statusText}`);
+    }
+
+    return (await response.json()) as T;
+  }
+
+  getStreamUrl() {
+    return `${this.baseUrl}/events/stream`;
+  }
+
+  async getLiveSnapshot(): Promise<LiveSnapshot> {
+    return this.requestJson<LiveSnapshot>('/live/snapshot');
+  }
+
+  async getModelStatus(): Promise<ModelStatus> {
+    return this.requestJson<ModelStatus>('/models/status');
+  }
+
+  async updateMonitoringConfig(config: Partial<MonitoringConfig>): Promise<MonitoringConfig> {
+    return this.requestJson<MonitoringConfig>('/config', {
+      method: 'PUT',
+      body: config,
+    });
+  }
+
   async detectAnomalies(
     workflowId: string,
     stepId: string,
@@ -56,17 +68,10 @@ class AIClient {
     sensitivity: number = 0.1
   ): Promise<AnomalyResult> {
     try {
-      const response = await fetch(`${this.baseUrl}/analyze/anomaly`, {
+      return await this.requestJson<AnomalyResult>('/analyze/anomaly', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ workflowId, stepId, metrics, sensitivity }),
+        body: { workflowId, stepId, metrics, sensitivity },
       });
-
-      if (!response.ok) {
-        throw new Error(`AI service error: ${response.statusText}`);
-      }
-
-      return await response.json();
     } catch (error) {
       console.error('Anomaly detection failed:', error);
       return {
@@ -76,6 +81,8 @@ class AIClient {
         anomalyScore: 0,
         hasAnomaly: false,
         threshold: 0,
+        shapContributions: [],
+        summary: 'Live anomaly analysis unavailable',
       };
     }
   }
@@ -87,17 +94,10 @@ class AIClient {
     horizon: number = 5
   ): Promise<PredictionResult> {
     try {
-      const response = await fetch(`${this.baseUrl}/analyze/predict`, {
+      return await this.requestJson<PredictionResult>('/analyze/predict', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ workflowId, stepId, historicalMetrics, horizon }),
+        body: { workflowId, stepId, historicalMetrics, horizon },
       });
-
-      if (!response.ok) {
-        throw new Error(`AI service error: ${response.statusText}`);
-      }
-
-      return await response.json();
     } catch (error) {
       console.error('Friction prediction failed:', error);
       return {
@@ -107,6 +107,7 @@ class AIClient {
         trend: 'stable',
         confidence: 0,
         riskLevel: 'low',
+        predictedAverage: 0,
       };
     }
   }
@@ -120,24 +121,17 @@ class AIClient {
     trend: string
   ): Promise<ExplanationResult> {
     try {
-      const response = await fetch(`${this.baseUrl}/analyze/explain`, {
+      return await this.requestJson<ExplanationResult>('/analyze/explain', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+        body: {
           workflowId,
           stepId,
           stepName,
           currentMetrics,
           anomalyDetected,
           trend,
-        }),
+        },
       });
-
-      if (!response.ok) {
-        throw new Error(`AI service error: ${response.statusText}`);
-      }
-
-      return await response.json();
     } catch (error) {
       console.error('Explanation generation failed:', error);
       return {
@@ -148,6 +142,7 @@ class AIClient {
         recommendation: 'Please try again later',
         confidenceLevel: 0,
         reasoning: '',
+        suggestedFix: 'Retry once the AI service is healthy.',
       };
     }
   }
@@ -158,19 +153,12 @@ class AIClient {
     trainingData: MetricData[]
   ): Promise<{ status: string; samples: number }> {
     try {
-      const response = await fetch(`${this.baseUrl}/train/anomaly`, {
+      return await this.requestJson<{ status: string; samples: number }>('/train/anomaly', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ workflowId, stepId, trainingData }),
+        body: { workflowId, stepId, trainingData },
       });
-
-      if (!response.ok) {
-        throw new Error(`AI service error: ${response.statusText}`);
-      }
-
-      return await response.json();
     } catch (error) {
-      console.error('Training failed:', error);
+      console.error('Anomaly training failed:', error);
       return { status: 'failed', samples: 0 };
     }
   }
@@ -181,28 +169,34 @@ class AIClient {
     trainingData: MetricData[]
   ): Promise<{ status: string; samples: number }> {
     try {
-      const response = await fetch(`${this.baseUrl}/train/predictor`, {
+      return await this.requestJson<{ status: string; samples: number }>('/train/predictor', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ workflowId, stepId, trainingData }),
+        body: { workflowId, stepId, trainingData },
       });
-
-      if (!response.ok) {
-        throw new Error(`AI service error: ${response.statusText}`);
-      }
-
-      return await response.json();
     } catch (error) {
-      console.error('Training failed:', error);
+      console.error('Predictor training failed:', error);
       return { status: 'failed', samples: 0 };
     }
   }
 
+  async retrainLiveModels() {
+    return this.requestJson<{ status: string; samples: number; retrainedAt: string }>(
+      '/train/realtime',
+      {
+        method: 'POST',
+      }
+    );
+  }
+
   async healthCheck(): Promise<{ status: string; service: string }> {
     try {
-      const response = await fetch(`${this.baseUrl}/health`);
-      return await response.json();
-    } catch (error) {
+      const response = await fetch(`${this.baseUrl}/health`, { cache: 'no-store' });
+      if (!response.ok) {
+        throw new Error(`AI service error ${response.status}`);
+      }
+
+      return (await response.json()) as { status: string; service: string };
+    } catch {
       return { status: 'unhealthy', service: 'HFME AI Service' };
     }
   }

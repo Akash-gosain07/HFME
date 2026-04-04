@@ -7,4 +7,5 @@ pandas==2.2.3
 joblib==1.4.2
 python-dotenv==1.0.1
 httpx==0.28.1
-google-generativeai>=0.8.0
+redis==5.2.1
+shap==0.47.1

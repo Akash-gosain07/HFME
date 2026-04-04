@@ -55,5 +55,6 @@
   }
   body {
     @apply bg-background text-foreground antialiased transition-colors duration-300;
+    font-family: "Aptos", "Segoe UI", sans-serif;
   }
 }

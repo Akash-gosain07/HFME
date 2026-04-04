@@ -134,11 +134,10 @@ model AIMonitoringConfig {
   anomalySensitivity    Float    @default(0.1)
   predictionEnabled     Boolean  @default(true)
   explanationEnabled    Boolean  @default(true)
-  monitoringInterval    Int      @default(300)
+  monitoringInterval    Int      @default(1)
   alertThreshold        Float    @default(0.7)
   createdAt             DateTime @default(now())
   updatedAt             DateTime @updatedAt
 
   @@map("ai_monitoring_config")
 }
-

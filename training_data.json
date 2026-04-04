@@ -1,0 +1,1282 @@
+[
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":4,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3,\"validation_error\":1}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3,\"validation_error\":2}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":5,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":1,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":2,\"back_navigation\":2,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3,\"validation_error\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":5,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3,\"validation_error\":1}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":2,\"step_completed\":4,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":2,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":2,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":2,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"back_navigation\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"back_navigation\":1,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":2,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"back_navigation\":2,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":1,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":1,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":2,\"back_navigation\":1,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":2,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3,\"validation_error\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":1,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3,\"validation_error\":2}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":4,\"back_navigation\":1,\"step_completed\":3,\"validation_error\":1}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":2,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"validation_error\":3,\"step_completed\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: E-commerce Checkout Flow. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":4,\"step_completed\":4,\"validation_error\":1,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":1,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":1,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":3,\"step_completed\":4,\"back_navigation\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":13,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":1,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":8,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":3,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":4,\"validation_error\":2}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":3,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":10,\"step_completed\":4,\"back_navigation\":1}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":9,\"back_navigation\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":1,\"step_completed\":5,\"back_navigation\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":4,\"step_completed\":5,\"validation_error\":7}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":1,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":4,\"back_navigation\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":4,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":4,\"back_navigation\":2}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":9,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":7}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":7}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":4,\"validation_error\":6,\"back_navigation\":1}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":4,\"validation_error\":1}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":4,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":3,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":5,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":2,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":10,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"back_navigation\":6,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":4,\"back_navigation\":2}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":2,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":7,\"back_navigation\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"back_navigation\":3,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":10,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":8,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":5,\"back_navigation\":6}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":2,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":6,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":12,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"back_navigation\":8,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":14,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":4,\"back_navigation\":5}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":4,\"back_navigation\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"step_completed\":5,\"back_navigation\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":11}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":11}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":9,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":9,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"back_navigation\":5,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":6,\"back_navigation\":6}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":4,\"back_navigation\":2}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":9,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":5,\"step_completed\":4,\"validation_error\":9}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":13,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":13,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":11}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":16,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":12,\"step_completed\":5,\"back_navigation\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":10,\"back_navigation\":5,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":9,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":5,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":9,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":13,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":10,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":2,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":5,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":9,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":2,\"back_navigation\":6}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":7,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":13,\"step_completed\":5,\"back_navigation\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: SaaS User Onboarding. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":14,\"back_navigation\":4,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":4,\"validation_error\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":4,\"validation_error\":20,\"back_navigation\":9}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":7}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":3,\"back_navigation\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":2,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":6}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":6,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":28,\"back_navigation\":8,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"back_navigation\":5,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":11,\"step_completed\":5,\"back_navigation\":10}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":2,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":1,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":5,\"step_completed\":4,\"validation_error\":3}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":4,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":6,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":29,\"back_navigation\":9,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":7,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":10,\"step_completed\":5,\"validation_error\":9}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":4,\"back_navigation\":2}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":4,\"back_navigation\":11}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":14,\"back_navigation\":5,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":22,\"back_navigation\":9,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":2,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":4,\"step_completed\":5,\"validation_error\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":19,\"back_navigation\":9,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":27,\"back_navigation\":13,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":3,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":30,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":24,\"step_completed\":5,\"back_navigation\":8}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":7,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":8,\"step_completed\":5,\"validation_error\":18}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":6,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":23,\"back_navigation\":13,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":1,\"step_completed\":5,\"validation_error\":4}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":2,\"step_completed\":5,\"validation_error\":7}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":8,\"back_navigation\":2,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":26,\"back_navigation\":9,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":2,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":3,\"step_completed\":5,\"validation_error\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Dropped-off. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"back_navigation\":4,\"step_completed\":4}.",
+    "response": "High friction: Session drop-off detected. The user abandoned the workflow, indicating potential confusion or a blocking issue in the preceding step."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":25,\"back_navigation\":13,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"back_navigation\":3,\"validation_error\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":6,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":24,\"back_navigation\":9,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":4,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":7,\"step_completed\":5,\"back_navigation\":1}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":4,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"back_navigation\":1,\"step_completed\":5,\"validation_error\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"step_completed\":5,\"validation_error\":5,\"back_navigation\":3}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":5,\"step_completed\":5,\"back_navigation\":2}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":19,\"back_navigation\":12,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":6,\"back_navigation\":4,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":15,\"back_navigation\":6,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  },
+  {
+    "instruction": "Analyze friction in this HFME data: Workflow: Document Upload & Processing. Session Status: Completed. Duration: N/A mins. Events Summary: {\"step_started\":5,\"validation_error\":3,\"back_navigation\":3,\"step_completed\":5}.",
+    "response": "No obvious friction detected. User completed the workflow smoothly."
+  }
+]

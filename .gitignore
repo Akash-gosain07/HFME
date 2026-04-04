@@ -9,6 +9,7 @@ __pycache__/
 out/
 build/
 dist/
+*.tsbuildinfo
 
 # Environment variables
 .env
