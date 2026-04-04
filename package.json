@@ -18,6 +18,7 @@
     "setup": "npm install && npm run db:generate && npm run db:push && npm run db:seed"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@prisma/client": "^5.22.0",
     "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-avatar": "^1.1.1",

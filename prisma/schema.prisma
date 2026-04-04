@@ -141,3 +141,4 @@ model AIMonitoringConfig {
 
   @@map("ai_monitoring_config")
 }
+
