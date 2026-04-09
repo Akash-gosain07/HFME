@@ -1,0 +1,143 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         String   @default("user")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Workflow {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  steps              Step[]
+  sessions           Session[]
+  aggregatedMetrics  AggregatedMetrics[]
+  aiInsights         AIInsight[]
+
+  @@map("workflows")
+}
+
+model Step {
+  id                  String   @id @default(cuid())
+  workflowId          String
+  name                String
+  order               Int
+  expectedTimeSeconds Int      @default(30)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  workflow           Workflow            @relation(fields: [workflowId], references: [id], onDelete: Cascade)
+  events             Event[]
+  aggregatedMetrics  AggregatedMetrics[]
+  aiInsights         AIInsight[]
+
+  @@unique([workflowId, order])
+  @@map("steps")
+}
+
+model Session {
+  id         String    @id @default(cuid())
+  workflowId String
+  startedAt  DateTime  @default(now())
+  endedAt    DateTime?
+  completed  Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  workflow Workflow @relation(fields: [workflowId], references: [id], onDelete: Cascade)
+  events   Event[]
+
+  @@index([workflowId])
+  @@map("sessions")
+}
+
+model Event {
+  id        String   @id @default(cuid())
+  sessionId String
+  stepId    String
+  type      String
+  timestamp DateTime @default(now())
+  metadata  String?
+
+  session Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  step    Step    @relation(fields: [stepId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId])
+  @@index([stepId])
+  @@map("events")
+}
+
+model AggregatedMetrics {
+  id            String   @id @default(cuid())
+  workflowId    String
+  stepId        String
+  avgTime       Float    @default(0)
+  retries       Int      @default(0)
+  idleTime      Float    @default(0)
+  backNav       Int      @default(0)
+  dropOffRate   Float    @default(0)
+  frictionScore Float    @default(0)
+  sessionCount  Int      @default(0)
+  calculatedAt  DateTime @default(now())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  workflow Workflow @relation(fields: [workflowId], references: [id], onDelete: Cascade)
+  step     Step     @relation(fields: [stepId], references: [id], onDelete: Cascade)
+
+  @@unique([workflowId, stepId])
+  @@index([workflowId])
+  @@map("aggregated_metrics")
+}
+
+model AIInsight {
+  id               String   @id @default(cuid())
+  workflowId       String
+  stepId           String
+  detectedIssue    String
+  impactScore      Float
+  recommendation   String
+  confidenceLevel  Float
+  insightType      String   @default("anomaly")
+  isActive         Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  workflow Workflow @relation(fields: [workflowId], references: [id], onDelete: Cascade)
+  step     Step     @relation(fields: [stepId], references: [id], onDelete: Cascade)
+
+  @@index([workflowId])
+  @@index([stepId])
+  @@map("ai_insights")
+}
+
+model AIMonitoringConfig {
+  id                    String   @id @default(cuid())
+  enabled               Boolean  @default(true)
+  anomalySensitivity    Float    @default(0.1)
+  predictionEnabled     Boolean  @default(true)
+  explanationEnabled    Boolean  @default(true)
+  monitoringInterval    Int      @default(1)
+  alertThreshold        Float    @default(0.7)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  @@map("ai_monitoring_config")
+}

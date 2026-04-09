@@ -1,0 +1,11 @@
+fastapi==0.115.5
+uvicorn==0.32.1
+pydantic==2.10.3
+scikit-learn==1.6.0
+numpy==2.2.0
+pandas==2.2.3
+joblib==1.4.2
+python-dotenv==1.0.1
+httpx==0.28.1
+redis==5.2.1
+

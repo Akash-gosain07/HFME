@@ -1,0 +1,57 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: hfme-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ai-service:
+    build:
+      context: .
+      dockerfile: ai-service/Dockerfile
+    container_name: hfme-ai-service
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - AI_INTERNAL_API_KEY=${AI_INTERNAL_API_KEY:-hfme-internal-key}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+    ports:
+      - "8000:8000"
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hfme-web
+    environment:
+      - DATABASE_URL=file:./dev.db
+      - REDIS_URL=redis://redis:6379
+      - AI_SERVICE_URL=http://ai-service:8000
+      - AI_INTERNAL_API_KEY=${AI_INTERNAL_API_KEY:-hfme-internal-key}
+      - AUTH_SECRET=${AUTH_SECRET:-hfme-local-auth-secret}
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      redis:
+        condition: service_healthy
+      ai-service:
+        condition: service_healthy
+
+volumes:
+  redis_data:
