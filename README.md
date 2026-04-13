@@ -187,7 +187,7 @@ The current implementation was validated with:
 - Live snapshot delta checks showing tick and friction changes between reads
 - SSE stream output via `/api/ai/stream`
 - Manual insight, config update, and retraining route checks
-- Headless browser screenshot capture with Playwright Core + local Chrome
+- Headless browser screenshot capture with Playwright Core + local Chrome .
 
 ## Troubleshooting
 
